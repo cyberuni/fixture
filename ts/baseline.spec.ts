@@ -1,7 +1,6 @@
 import assert from 'assert'
 import { AssertOrder, assertron } from 'assertron'
 import fs from 'fs'
-import mkdirp from 'mkdirp'
 import path from 'path'
 import { pathEqual } from 'path-equal'
 import rimraf from 'rimraf'
@@ -276,7 +275,7 @@ test(`copyToBaseline.skip() to not doing anything. This allows consumer to keep 
 })
 
 test('result folder is empty when handler is invoked (only when the case is folder based)', () => {
-  mkdirp.sync('fixtures/dirty-result-folder/results/case-1')
+  fs.mkdirSync('fixtures/dirty-result-folder/results/case-1', { recursive: true })
   fs.writeFileSync('fixtures/dirty-result-folder/results/case-1/dirty.txt', 'dirty')
 
   return new Promise<void>(a => {
