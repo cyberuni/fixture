@@ -9,6 +9,9 @@ allowBuilds:
 # reads — npm warned "Unknown project config" and `pnpm config get minimumReleaseAge`
 # returned undefined, so no dependency was ever held back. pnpm reads it here.
 minimumReleaseAge: 1440
+# Without strict, pnpm silently falls back past the window instead of failing, so the
+# soak self-excludes exactly when it would have mattered.
+minimumReleaseAgeStrict: true
 
 # @typescript-eslint/parser@6.21.0 (via eslint-plugin-harmony) is the only thing
 # pulling minimatch 9.x, and it pins 9.0.3 — GHSA high, ReDoS in matchOne() via
