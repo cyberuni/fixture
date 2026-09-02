@@ -2,3 +2,10 @@
 # into a non-zero exit, not a warning. esbuild ships a native binary via postinstall.
 allowBuilds:
   esbuild: true
+  # @swc/core arrives with @repobuddy/jest v5 and ships a native binary the same way.
+  "@swc/core": true
+
+# The soak lived in .npmrc as `minimumreleaseage`, which is not a key pnpm or npm
+# reads — npm warned "Unknown project config" and `pnpm config get minimumReleaseAge`
+# returned undefined, so no dependency was ever held back. pnpm reads it here.
+minimumReleaseAge: 1440
