@@ -2,3 +2,20 @@
 # into a non-zero exit, not a warning. esbuild ships a native binary via postinstall.
 allowBuilds:
   esbuild: true
+  # @swc/core arrives with @repobuddy/jest v5 and ships a native binary the same way.
+  "@swc/core": true
+
+# The soak lived in .npmrc as `minimumreleaseage`, which is not a key pnpm or npm
+# reads — npm warned "Unknown project config" and `pnpm config get minimumReleaseAge`
+# returned undefined, so no dependency was ever held back. pnpm reads it here.
+minimumReleaseAge: 1440
+# Without strict, pnpm silently falls back past the window instead of failing, so the
+# soak self-excludes exactly when it would have mattered.
+minimumReleaseAgeStrict: true
+
+# @typescript-eslint/parser@6.21.0 (via eslint-plugin-harmony) is the only thing
+# pulling minimatch 9.x, and it pins 9.0.3 — GHSA high, ReDoS in matchOne() via
+# multiple non-adjacent GLOBSTAR segments, fixed in 9.0.7. Dev-only, but it is the
+# repo's one open Dependabot alert. Scoped to the 9 line so 3/5/7/8/10 are untouched.
+overrides:
+  minimatch@9: ^9.0.7
