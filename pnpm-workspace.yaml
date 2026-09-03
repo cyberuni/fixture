@@ -1,4 +1,4 @@
 # pnpm blocks dependency build scripts by default and pnpm 11 turns an unapproved one
-# into a non-zero exit, not a warning. esbuild ships a native binary via postinstall.
+# into a non-zero exit, not a warning.
 allowBuilds:
   esbuild: true
