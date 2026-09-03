@@ -3,7 +3,7 @@
 	"tasks": {
 		"build": {
 			"inputs": ["package.json", "tsconfig.json", "tsdown.config.ts", "ts/**/*.ts"],
-			"outputs": ["cjs/**", "esm/**"]
+			"outputs": ["esm/**"]
 		},
 		"clean": {
 			"cache": false

@@ -17,13 +17,14 @@
 	},
 	"type": "module",
 	"exports": {
+		"types": "./esm/index.d.ts",
 		"import": "./esm/index.js",
-		"require": "./cjs/index.js"
+		"default": "./esm/index.js"
 	},
-	"main": "./cjs/index.js",
+	"main": "./esm/index.js",
+	"module": "./esm/index.js",
 	"types": "./esm/index.d.ts",
 	"files": [
-		"cjs",
 		"esm",
 		"ts",
 		"!ts/**/*.spec.ts"
@@ -33,7 +34,7 @@
 		"build:watch": "tsdown --watch",
 		"check": "biome check",
 		"check:fix": "biome check --fix",
-		"clean": "rimraf coverage cjs esm lib fixtures/*/results *.tsbuildinfo",
+		"clean": "rimraf coverage esm lib fixtures/*/results *.tsbuildinfo",
 		"coverage": "vitest run --coverage",
 		"cs": "changeset",
 		"depcheck": "depcheck",
@@ -92,5 +93,8 @@
 		"vitest": "^4.1.11"
 	},
 	"packageManager": "pnpm@11.20.0",
-	"sideEffects": false
+	"sideEffects": false,
+	"engines": {
+		"node": ">= 18"
+	}
 }
