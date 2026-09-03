@@ -1,9 +1,18 @@
 ignores:
-  - "@commitlint/*"
-  - "@repobuddy/jest"
+  # Driven by the `commit-msg` hook / `commitlint.config.cjs`, neither of which
+  # depcheck follows.
+  - "@commitlint/cli"
+  - "@commitlint/config-conventional"
+  # `pnpm cs` / the release workflow drive the CLI; nothing imports it.
   - "@changesets/cli"
+  # Extended by `biome.json`, which depcheck does not read.
+  - "@repobuddy/biome"
+  # Test preset consumed via `jest.config.mjs`.
+  - "@repobuddy/jest"
   - "@types/jest"
-  - jest-*
-  - rimraf
-  - standard-log-color
+  - jest-watch-suspend
+  - jest-watch-toggle-config-2
+  - jest-watch-typeahead
   - ts-jest
+  # Not imported by name; `standard-log` loads it as a plugin at runtime.
+  - standard-log-color

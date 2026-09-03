@@ -1,6 +1,6 @@
 module.exports = {
-  extends: ['@commitlint/config-conventional'],
-  rules: {
-    "footer-max-line-length": [0]
-  }
+	extends: ['@commitlint/config-conventional'],
+	rules: {
+		'footer-max-line-length': [0]
+	}
 }
