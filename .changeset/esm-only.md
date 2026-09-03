@@ -22,5 +22,10 @@ What this breaks, precisely:
 `engines.node` is now declared as `>= 18` — the floor the dependencies already
 required, previously left unstated.
 
+Node builtins are now imported with the `node:` prefix (`node:fs`, `node:path`,
+`node:os`), which is what the published `esm/` output carries. Bare `fs` does not
+resolve under Deno; `node:fs` resolves under Node, Deno and Bun alike, so the
+package is importable from more runtimes than before.
+
 Nothing the ESM entry exports changed: same names, same types, same `esm/`
 paths as 3.2.x.
