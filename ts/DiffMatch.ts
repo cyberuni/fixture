@@ -2,10 +2,10 @@ import { diff_match_patch } from 'diff-match-patch'
 import 'diff-match-patch-line-and-word'
 
 export interface DiffResult {
-  value: string,
-  count?: number,
-  added?: boolean,
-  removed?: boolean
+	value: string
+	count?: number
+	added?: boolean
+	removed?: boolean
 }
 
 /**
@@ -24,41 +24,41 @@ export interface DiffResult {
  * form cannot distinguish "the prototype really has this" from "I wish it did".
  */
 export class DiffMatch extends diff_match_patch {
-  declare diff_lineMode: (text1: string, text2: string) => Array<[number, string]>
-  declare diff_wordMode: (text1: string, text2: string) => Array<[number, string]>
+	declare diff_lineMode: (text1: string, text2: string) => Array<[number, string]>
+	declare diff_wordMode: (text1: string, text2: string) => Array<[number, string]>
 
-  diffLines(expected: string, actual: string) {
-    return this.diff_lineMode(expected, actual).map(toJsDiffResult)
-  }
-  diffWords(expected: string, actual: string) {
-    return this.diff_wordMode(expected, actual).map(toJsDiffResultForWord)
-  }
+	diffLines(expected: string, actual: string) {
+		return this.diff_lineMode(expected, actual).map(toJsDiffResult)
+	}
+	diffWords(expected: string, actual: string) {
+		return this.diff_wordMode(expected, actual).map(toJsDiffResultForWord)
+	}
 }
 
 function toJsDiffResult(diff: [number, string]) {
-  const result = { value: diff[1] } as DiffResult
-  switch (diff[0]) {
-    case -1:
-      result.removed = true
-      break
-    case 1:
-      result.added = true
-      break
-  }
-  result.count = diff[1].match(/\n/g)!.length
-  return result
+	const result = { value: diff[1] } as DiffResult
+	switch (diff[0]) {
+		case -1:
+			result.removed = true
+			break
+		case 1:
+			result.added = true
+			break
+	}
+	result.count = diff[1].match(/\n/g)!.length
+	return result
 }
 
 function toJsDiffResultForWord(diff: [number, string]) {
-  const result = { value: diff[1] } as DiffResult
-  switch (diff[0]) {
-    case -1:
-      result.removed = true
-      break
-    case 1:
-      result.added = true
-      break
-  }
-  result.count = 1 + (diff[1].match(/[\s]/g) || []).length
-  return result
+	const result = { value: diff[1] } as DiffResult
+	switch (diff[0]) {
+		case -1:
+			result.removed = true
+			break
+		case 1:
+			result.added = true
+			break
+	}
+	result.count = 1 + (diff[1].match(/[\s]/g) || []).length
+	return result
 }

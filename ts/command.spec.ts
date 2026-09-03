@@ -1,50 +1,55 @@
+import path from 'node:path'
 import { a } from 'assertron'
-import path from 'path'
 import { pathEqual } from 'path-equal'
 import { baseline, execCommand, NotCommandCase, writeCommandResult } from './index.js'
 
 describe('execCommand()', () => {
-  it('throws NotCommandCase if the file is not json, yml, or yaml', async () => {
-    await a.throws(execCommand({ caseType: 'file', caseName: 'file1.txt', casePath: 'fixtures/file-cases/cases/file1.txt' }), NotCommandCase)
-  })
-  it('executes command within the case file, at the base folder', async () => {
-    const baseFolder = 'fixtures/command/cases'
-    const caseName = 'command.json'
-    const casePath = path.join(baseFolder, caseName)
+	it('throws NotCommandCase if the file is not json, yml, or yaml', async () => {
+		await a.throws(
+			execCommand({ caseType: 'file', caseName: 'file1.txt', casePath: 'fixtures/file-cases/cases/file1.txt' }),
+			NotCommandCase
+		)
+	})
+	it('executes command within the case file, at the base folder', async () => {
+		const baseFolder = 'fixtures/command/cases'
+		const caseName = 'command.json'
+		const casePath = path.join(baseFolder, caseName)
 
-    const { stdout } = await execCommand({ caseType: 'file', caseName, casePath })
+		const { stdout } = await execCommand({ caseType: 'file', caseName, casePath })
 
-    pathEqual(stdout, baseFolder)
-  })
+		pathEqual(stdout, baseFolder)
+	})
 
-  it('executes command in the "command" file within the case folder, at the case folder', async () => {
-    const casePath = 'fixtures/command/cases/folder'
-    const { stdout } = await execCommand({ caseType: 'folder', caseName: 'folder', casePath })
+	it('executes command in the "command" file within the case folder, at the case folder', async () => {
+		const casePath = 'fixtures/command/cases/folder'
+		const { stdout } = await execCommand({ caseType: 'folder', caseName: 'folder', casePath })
 
-    pathEqual(stdout, casePath)
-  })
-  it('throw error on failed command', async () => {
-    const error = await a.throws(execCommand({
-      caseType: 'folder',
-      caseName: 'command-error',
-      casePath: 'fixtures/command-error'
-    }))
+		pathEqual(stdout, casePath)
+	})
+	it('throw error on failed command', async () => {
+		const error = await a.throws(
+			execCommand({
+				caseType: 'folder',
+				caseName: 'command-error',
+				casePath: 'fixtures/command-error'
+			})
+		)
 
-    expect(error).toBeDefined()
-  })
-  it('can specify alternative command to execute at the casePath', async () => {
-    const casePath = 'fixtures/command/cases/folder'
-    const { stdout } = await execCommand({ casePath, command: 'node', args: ['-e', "'console.log(`hello`)'"] })
-    expect(stdout).toEqual('hello')
-  })
+		expect(error).toBeDefined()
+	})
+	it('can specify alternative command to execute at the casePath', async () => {
+		const casePath = 'fixtures/command/cases/folder'
+		const { stdout } = await execCommand({ casePath, command: 'node', args: ['-e', "'console.log(`hello`)'"] })
+		expect(stdout).toEqual('hello')
+	})
 })
 
 describe('writeCommandResult()', () => {
-  baseline('fixtures/command', ({ caseType, caseName, casePath, resultPath, match }) => {
-    it(caseName, async () => {
-      const result = await execCommand({ caseType, caseName, casePath })
-      writeCommandResult(resultPath, result)
-      return match()
-    })
-  })
+	baseline('fixtures/command', ({ caseType, caseName, casePath, resultPath, match }) => {
+		it(caseName, async () => {
+			const result = await execCommand({ caseType, caseName, casePath })
+			writeCommandResult(resultPath, result)
+			return match()
+		})
+	})
 })

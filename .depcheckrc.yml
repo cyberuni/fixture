@@ -1,9 +1,13 @@
 ignores:
-  - "@commitlint/*"
-  - "@repobuddy/jest"
+  # Driven by the `commit-msg` hook / `commitlint.config.cjs`, neither of which
+  # depcheck follows.
+  - "@commitlint/cli"
+  - "@commitlint/config-conventional"
+  # `pnpm cs` / the release workflow drive the CLI; nothing imports it.
   - "@changesets/cli"
-  - "@types/jest"
-  - jest-*
-  - rimraf
+  # Extended by `biome.json`, which depcheck does not read.
+  - "@repobuddy/biome"
+  # Loaded by vitest's coverage provider, not imported.
+  - "@vitest/coverage-v8"
+  # Not imported by name; `standard-log` loads it as a plugin at runtime.
   - standard-log-color
-  - ts-jest

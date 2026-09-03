@@ -1,10 +1,21 @@
 {
-  "extends": "./tsconfig.esm.json",
-  "compilerOptions": {
-    "noEmit": true
-  },
-  "include": [
-    "ts",
-    "typings"
-  ]
+	"compilerOptions": {
+		"declaration": true,
+		"declarationMap": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"newLine": "LF",
+		"noEmit": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": false,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"stripInternal": true,
+		"target": "ES2022",
+		"types": ["node", "vitest/globals"]
+	},
+	"include": ["ts", "typings", "tsdown.config.ts", "vitest.config.ts"]
 }
