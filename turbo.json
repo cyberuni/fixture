@@ -1,0 +1,25 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"tasks": {
+		"build": {
+			"inputs": ["package.json", "tsconfig.json", "tsdown.config.ts", "ts/**/*.ts"],
+			"outputs": ["cjs/**", "esm/**"]
+		},
+		"clean": {
+			"cache": false
+		},
+		"coverage": {
+			"inputs": ["package.json", "tsconfig.json", "vitest.config.ts", "ts/**/*.ts", "fixtures/**"],
+			"outputs": ["coverage/**"]
+		},
+		"depcheck": {
+			"inputs": ["package.json", ".depcheckrc.yml", "ts/**/*.ts"]
+		},
+		"test": {
+			"inputs": ["package.json", "tsconfig.json", "vitest.config.ts", "ts/**/*.ts", "fixtures/**"]
+		},
+		"typecheck": {
+			"inputs": ["package.json", "tsconfig.json", "tsdown.config.ts", "vitest.config.ts", "ts/**/*.ts", "typings/**"]
+		}
+	}
+}
