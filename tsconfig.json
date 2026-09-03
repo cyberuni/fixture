@@ -15,7 +15,7 @@
 		"strict": true,
 		"stripInternal": true,
 		"target": "ES2022",
-		"types": ["node", "jest"]
+		"types": ["node", "vitest/globals"]
 	},
-	"include": ["ts", "typings", "tsdown.config.ts"]
+	"include": ["ts", "typings", "tsdown.config.ts", "vitest.config.ts"]
 }

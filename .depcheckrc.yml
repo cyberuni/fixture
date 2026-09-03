@@ -7,12 +7,7 @@ ignores:
   - "@changesets/cli"
   # Extended by `biome.json`, which depcheck does not read.
   - "@repobuddy/biome"
-  # Test preset consumed via `jest.config.mjs`.
-  - "@repobuddy/jest"
-  - "@types/jest"
-  - jest-watch-suspend
-  - jest-watch-toggle-config-2
-  - jest-watch-typeahead
-  - ts-jest
+  # Loaded by vitest's coverage provider, not imported.
+  - "@vitest/coverage-v8"
   # Not imported by name; `standard-log` loads it as a plugin at runtime.
   - standard-log-color
