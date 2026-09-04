@@ -1,5 +1,47 @@
 # @unional/fixture
 
+## 4.0.0
+
+### Major Changes
+
+- b1f2eab: Drop CommonJS support. The package is now ESM-only.
+  
+  There is no `cjs/` output any more and `exports` resolves only to
+  `./esm/index.js`. Import it:
+  
+  ```js
+  import { baseline } from '@unional/fixture'
+  ```
+  
+  What this breaks, precisely:
+  
+  - `require('@unional/fixture')` from a CommonJS file on Node older than 22.12
+    now throws `ERR_REQUIRE_ESM`. Move the calling test file to ESM, or use
+    `const { baseline } = await import('@unional/fixture')`.
+  - On Node 22.12 and newer, `require()` of an ES module is supported by Node
+    itself and keeps working against the ESM entry.
+  
+  `engines.node` is now declared as `>= 18` — the floor the dependencies already
+  required, previously left unstated.
+  
+  Node builtins are now imported with the `node:` prefix (`node:fs`, `node:path`,
+  `node:os`), which is what the published `esm/` output carries. Bare `fs` does not
+  resolve under Deno; `node:fs` resolves under Node, Deno and Bun alike, so the
+  package is importable from more runtimes than before.
+  
+  Nothing the ESM entry exports changed: same names, same types, same `esm/`
+  paths as 3.2.x.
+
+### Patch Changes
+
+- 4e085ac: Drop the `mkdirp` dependency in favour of `fs.mkdirSync(path, { recursive: true })`.
+  
+  `ensureFolderExist()` behaves identically — `mkdirp.sync` has been a wrapper over
+  Node's own recursive mkdir since Node 10. Removing it also removes the stale
+  `@types/mkdirp` (v1 types against a v2 runtime) and retires the renovate PR that
+  could not pass: mkdirp v3 dropped the default export, so `import mkdirp from 'mkdirp'`
+  fails outright.
+
 ## 3.2.18
 
 ### Patch Changes

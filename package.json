@@ -1,6 +1,6 @@
 {
 	"name": "@unional/fixture",
-	"version": "3.2.18",
+	"version": "4.0.0",
 	"description": "Provides fixture to tests",
 	"homepage": "https://github.com/cyberuni/fixture",
 	"bugs": {
