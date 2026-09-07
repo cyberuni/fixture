@@ -1,6 +1,6 @@
 import assert from 'node:assert'
 import { AssertOrder } from 'assertron'
-import { createStandardLogForTest, type StandardLogForTest } from 'standard-log'
+import { createStandardLogForTest, type StandardLogForTest } from 'standard-log/testing'
 
 import { context } from './context.js'
 import { baseline } from './index.js'
