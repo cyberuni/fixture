@@ -54,8 +54,8 @@ importers:
         specifier: ^12.0.0
         version: 12.1.2(standard-log@11.5.2)
       tersify:
-        specifier: ^3.12.1
-        version: 3.12.1
+        specifier: ^4.0.7
+        version: 4.0.7
       type-plus:
         specifier: 8.0.0-beta.10
         version: 8.0.0-beta.10(typescript@7.0.2)
@@ -1844,8 +1844,8 @@ packages:
   tersify@3.12.1:
     resolution: {integrity: sha512-VwzXGHZSOB4T27s4uvh9v8FYrNXyfVz0nBQi28TDwrZoQwT8ZJUp1W2Ff73ekN07stJSb0D+pr6iXeNeFqTI6Q==}
 
-  tersify@4.0.6:
-    resolution: {integrity: sha512-+z2dTeRvbPyI7qiAmBY+VgWnhhN9IuaGjgrPfeF33hI4A/Yd9KT11tbc4l8vfIA3L/5EWiE0swvxOfAckGRuzA==}
+  tersify@4.0.7:
+    resolution: {integrity: sha512-HbSau9xNaHqYRJ/Y6lAddBLNpi5wowJhDGuhfM/6LAmyhsIiNKX3Q50qJwRcKFsV4/BV45XMyTdaHZ5nW6OjRg==}
 
   tinybench@2.9.0:
     resolution: {integrity: sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==}
@@ -2842,7 +2842,7 @@ snapshots:
       iso-error: 6.0.5
       path-equal: 1.2.7
       satisfier: 5.4.4
-      tersify: 4.0.6
+      tersify: 4.0.7
       type-plus: 8.0.0-beta.10(typescript@7.0.2)
     transitivePeerDependencies:
       - typescript
@@ -3545,7 +3545,7 @@ snapshots:
 
   satisfier@5.4.4:
     dependencies:
-      tersify: 4.0.6
+      tersify: 4.0.7
 
   semver-compare@1.0.0: {}
 
@@ -3633,7 +3633,7 @@ snapshots:
       is-buffer: 2.0.5
       unpartial: 1.0.7
 
-  tersify@4.0.6:
+  tersify@4.0.7:
     dependencies:
       acorn: 8.18.0
       unpartial: 1.0.7
@@ -3703,7 +3703,7 @@ snapshots:
 
   type-plus@8.0.0-beta.10(typescript@7.0.2):
     dependencies:
-      tersify: 4.0.6
+      tersify: 4.0.7
       typescript: 7.0.2
       unpartial: 1.0.7
 
