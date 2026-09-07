@@ -2,24 +2,24 @@
 	"$schema": "https://turbo.build/schema.json",
 	"tasks": {
 		"build": {
-			"inputs": ["package.json", "tsconfig.json", "tsdown.config.ts", "ts/**/*.ts"],
+			"inputs": ["package.json", "tsconfig.json", "tsdown.config.ts", "src/**/*.ts"],
 			"outputs": ["esm/**"]
 		},
 		"clean": {
 			"cache": false
 		},
 		"coverage": {
-			"inputs": ["package.json", "tsconfig.json", "vitest.config.ts", "ts/**/*.ts", "fixtures/**"],
+			"inputs": ["package.json", "tsconfig.json", "vitest.config.ts", "src/**/*.ts", "fixtures/**"],
 			"outputs": ["coverage/**"]
 		},
 		"depcheck": {
-			"inputs": ["package.json", ".depcheckrc.yml", "ts/**/*.ts"]
+			"inputs": ["package.json", ".depcheckrc.yml", "src/**/*.ts"]
 		},
 		"test": {
-			"inputs": ["package.json", "tsconfig.json", "vitest.config.ts", "ts/**/*.ts", "fixtures/**"]
+			"inputs": ["package.json", "tsconfig.json", "vitest.config.ts", "src/**/*.ts", "fixtures/**"]
 		},
 		"typecheck": {
-			"inputs": ["package.json", "tsconfig.json", "tsdown.config.ts", "vitest.config.ts", "ts/**/*.ts", "typings/**"]
+			"inputs": ["package.json", "tsconfig.json", "tsdown.config.ts", "vitest.config.ts", "src/**/*.ts", "typings/**"]
 		}
 	}
 }
