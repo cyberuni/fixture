@@ -3,11 +3,11 @@ import { defineConfig } from 'vitest/config'
 export default defineConfig({
 	test: {
 		globals: true,
-		include: ['ts/**/*.spec.ts'],
+		include: ['src/**/*.spec.ts'],
 		coverage: {
 			provider: 'v8',
-			include: ['ts/**/*.ts'],
-			exclude: ['ts/**/*.spec.ts', 'ts/index.ts'],
+			include: ['src/**/*.ts'],
+			exclude: ['src/**/*.spec.ts', 'src/index.ts'],
 			reporter: ['text', 'lcov'],
 			// Set just below what the suite achieves on CI, so a regression fails the
 			// build instead of quietly reporting a lower number. CI reports slightly

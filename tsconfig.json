@@ -17,5 +17,5 @@
 		"target": "ES2022",
 		"types": ["node", "vitest/globals"]
 	},
-	"include": ["ts", "typings", "tsdown.config.ts", "vitest.config.ts"]
+	"include": ["src", "typings", "tsdown.config.ts", "vitest.config.ts"]
 }

@@ -9,13 +9,13 @@ import { defineConfig } from 'tsdown'
  * would have thrown), and that constraint is gone with the CJS output.
  */
 export default defineConfig({
-	entry: ['ts/**/*.ts', '!ts/**/*.spec.ts'],
+	entry: ['src/**/*.ts', '!src/**/*.spec.ts'],
 	format: 'esm',
 	outDir: 'esm',
 	platform: 'node',
 	unbundle: true,
 	// `dts.sourcemap` governs both `.d.ts.map` and `.js.map`. `tsc` published both,
-	// and they resolve against the `ts/` sources the package already ships.
+	// and they resolve against the `src/` sources the package already ships.
 	dts: { sourcemap: true },
 	outExtensions: () => ({ js: '.js', dts: '.d.ts' }),
 	clean: ['esm']
