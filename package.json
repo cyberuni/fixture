@@ -76,6 +76,7 @@
 		"@commitlint/cli": "^21.0.0",
 		"@commitlint/config-conventional": "^21.0.0",
 		"@repobuddy/biome": "^2.3.1",
+		"@repobuddy/vitest": "^2.1.4",
 		"@types/glob": "^8.0.0",
 		"@types/js-yaml": "^4.0.5",
 		"@types/node": "^26.4.0",
