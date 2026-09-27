@@ -57,8 +57,8 @@ importers:
         specifier: ^4.0.7
         version: 4.0.7
       type-plus:
-        specifier: 8.0.0-beta.10
-        version: 8.0.0-beta.10(typescript@7.0.2)
+        specifier: 8.0.0-beta.11
+        version: 8.0.0-beta.11(typescript@7.0.2)
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.5.2
@@ -1925,6 +1925,11 @@ packages:
     peerDependencies:
       typescript: '>= 5.6.0'
 
+  type-plus@8.0.0-beta.11:
+    resolution: {integrity: sha512-8/QsyrWhzvUpq7HREOUR4T4sVMiVMBYvMLH9brYvfwc0Nr71a2mPAafrWwg6W5EWsgIr0TUBHBNtwO8neKZUUg==}
+    peerDependencies:
+      typescript: '>= 5.4.0'
+
   typescript@7.0.2:
     resolution: {integrity: sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==}
     engines: {node: '>=16.20.0'}
@@ -2852,7 +2857,7 @@ snapshots:
       path-equal: 1.2.7
       satisfier: 5.4.4
       tersify: 4.0.7
-      type-plus: 8.0.0-beta.10(typescript@7.0.2)
+      type-plus: 8.0.0-beta.11(typescript@7.0.2)
     transitivePeerDependencies:
       - typescript
 
@@ -3694,6 +3699,12 @@ snapshots:
       '@turbo/windows-arm64': 2.10.12
 
   type-plus@8.0.0-beta.10(typescript@7.0.2):
+    dependencies:
+      tersify: 4.0.7
+      typescript: 7.0.2
+      unpartial: 1.0.7
+
+  type-plus@8.0.0-beta.11(typescript@7.0.2):
     dependencies:
       tersify: 4.0.7
       typescript: 7.0.2
