@@ -48,17 +48,20 @@ importers:
         specifier: ^3.0.2
         version: 3.0.2
       standard-log:
-        specifier: ^13.2.0
-        version: 13.2.0(typescript@7.0.2)
+        specifier: ^13.3.1
+        version: 13.3.1(typescript@7.0.2)
       standard-log-color:
-        specifier: ^13.2.0
-        version: 13.2.0(standard-log@13.2.0(typescript@7.0.2))
+        specifier: ^13.3.1
+        version: 13.3.1(standard-log@13.3.1(typescript@7.0.2))
       tersify:
-        specifier: ^4.0.7
-        version: 4.0.7
+        specifier: ^4.0.8
+        version: 4.0.8
       type-plus:
-        specifier: 8.0.0-beta.10
-        version: 8.0.0-beta.10(typescript@7.0.2)
+        specifier: 8.0.0-beta.12
+        version: 8.0.0-beta.12(typescript@7.0.2)
+      unpartial:
+        specifier: ^1.0.8
+        version: 1.0.8
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.5.2
@@ -73,11 +76,11 @@ importers:
         specifier: ^21.0.0
         version: 21.2.2
       '@repobuddy/biome':
-        specifier: ^2.3.1
-        version: 2.3.1(@biomejs/biome@2.5.11)
+        specifier: ^2.4.0
+        version: 2.4.0(@biomejs/biome@2.5.11)
       '@repobuddy/vitest':
-        specifier: ^2.1.4
-        version: 2.2.0(vitest@4.1.11)
+        specifier: ^2.3.0
+        version: 2.3.0(typescript@7.0.2)(vitest@4.1.11)
       '@types/glob':
         specifier: ^8.0.0
         version: 8.1.0
@@ -94,8 +97,8 @@ importers:
         specifier: ^4.1.11
         version: 4.1.11(vitest@4.1.11)
       assertron:
-        specifier: ^11.6.0
-        version: 11.6.0(typescript@7.0.2)
+        specifier: ^11.7.0
+        version: 11.7.0(typescript@7.0.2)
       depcheck:
         specifier: ^1.4.3
         version: 1.4.7(supports-color@8.1.1)
@@ -106,8 +109,8 @@ importers:
         specifier: ^9.0.0
         version: 9.0.3
       path-equal:
-        specifier: ^1.2.5
-        version: 1.2.7
+        specifier: ^1.2.8
+        version: 1.2.8
       tsdown:
         specifier: ^0.22.14
         version: 0.22.14(typescript@7.0.2)
@@ -391,8 +394,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@just-func/types@0.6.0':
-    resolution: {integrity: sha512-5/nFEvX/QizdRCMXjo/VfW4qgBw2pX2+Sz5+aJ907d7NqXVXxEu1Hwu6k35A5INI2NtIOvplQnkm7uFqPGiL0w==}
+  '@just-func/types@0.6.1':
+    resolution: {integrity: sha512-uIE3xNCNcyIsM/YhOAEEh8xNwDhcT5KMM6F4R/aQGVijt6sMePjd7CDPeVrXd2XFks2nGiin/cEMTYhAIaXa6A==}
 
   '@manypkg/find-root@3.1.0':
     resolution: {integrity: sha512-BcSqCyKhBVZ5YkSzOiheMCV41kqAFptW6xGqYSTjkVTl9XQpr+pqHhwgGCOHQtjDCv7Is6EFyA14Sm5GVbVABA==}
@@ -416,16 +419,16 @@ packages:
   '@quansync/fs@1.0.0':
     resolution: {integrity: sha512-4TJ3DFtlf1L5LDMaM6CanJ/0lckGNtJcMjQ1NAV6zDmA0tEHKZtxNKin8EgPaVX1YzljbxckyT2tJrpQKAtngQ==}
 
-  '@repobuddy/biome@2.3.1':
-    resolution: {integrity: sha512-dFxQSl+lYZ5Wc9TVUxrSwze9vwC6IBpg4zcbxJkLiZPPnYLX95Zvp9zC+ChPRmc2QpyVzqH4eGnxKzHaVZ1A7Q==}
+  '@repobuddy/biome@2.4.0':
+    resolution: {integrity: sha512-YdMjhey4Y9XzDR1cOIFFNBr6O+87TkFA1pViDFEFFryYKUdJ3qN/yZpCgcL1exZsuGDxC+0540hmJmtl9wKBQQ==}
     peerDependencies:
       '@biomejs/biome': '>= 2'
 
-  '@repobuddy/test@1.0.2':
-    resolution: {integrity: sha512-EeofGgGuvzLee0Ya41H3SDL+sSMG/MtekDDS9wPVpaPaFxHrq+vIzUl8Ls+mchFSBXwifrupRFjVwGYcL+9LZw==}
+  '@repobuddy/test@1.1.0':
+    resolution: {integrity: sha512-YW0j5QOxaNA1cSZm8lcKSFNlTey+D3Qpx4N/hb1AsD+lkbXOnhcC+2TrPIP/Om3NmBiNtXKHGg+yPekapEMbLQ==}
 
-  '@repobuddy/vitest@2.2.0':
-    resolution: {integrity: sha512-IfGyuq+VvpJPVIsQg1QAmGpWDjbz6EMG9XoofEiBan/Yv3dpUQsHyEmfriTxwVsIbdnvbwQ9AvAoWVKkSfAYLg==}
+  '@repobuddy/vitest@2.3.0':
+    resolution: {integrity: sha512-f9si1f0+OOAbnqRT/Zp9NMJ9DVyF9BZF1IPgq9hgMZ3dgYo+ZlQYtsLSWhyTQNbdTkvm4tzPtLzDQ5wtt0NKWg==}
     peerDependencies:
       '@vitest/browser-playwright': ^4.0.15
       vitest: ^4.0.15
@@ -972,8 +975,8 @@ packages:
     resolution: {integrity: sha512-Izi8RQcffqCeNVgFigKli1ssklIbpHnCYc6AknXGYoB6grJqyeby7jv12JUQgmTAnIDnbck1uxksT4dzN3PWBA==}
     engines: {node: '>=12'}
 
-  assertron@11.6.0:
-    resolution: {integrity: sha512-10ISpYENayWRyH7bwz1l3jfYeyNv0W4TlJ5t2vNfPtKclHnpCXGKv0Vfr7xCGdgR843U2H3+EfUY12bOwjPDzA==}
+  assertron@11.7.0:
+    resolution: {integrity: sha512-LAykbog/XG9NO4T0kyHhOujm4xyEN2zsuqEHgqccHlLyCXm97ZJEXBVrQsk/+J+qIGqLAIv/Zk4hIOS/x8MATA==}
     engines: {node: '>=20'}
 
   ast-v8-to-istanbul@1.0.5:
@@ -1381,10 +1384,6 @@ packages:
     resolution: {integrity: sha512-FFUtZMpoZ8RqHS3XeXEmHWLA4thH+ZxCv2lOiPIn1Xc7CxrqhWzNSDzD+/chS/zbYezmiwWLdQC09JdQKmthOw==}
     engines: {node: '>=20'}
 
-  iso-error@6.0.5:
-    resolution: {integrity: sha512-e6RUrLKvZhUzkjVYozUo8RKnZsKtoEljdPyzXWJfPfn2jhZWn74xyEYYrlWDFNr/+zQcyDEmXYp7ir+hzbJ8MA==}
-    engines: {node: '>= 10'}
-
   iso-error@7.0.0:
     resolution: {integrity: sha512-GyHH/0Xyug/vO9LOr5zKI3fyEAAJuBuXYNZE+Fs5DmpUmH4oRbcR8aYyql+MGi8CY53qPcU1bNJEjC5QsesFhA==}
     engines: {node: '>= 20'}
@@ -1638,8 +1637,8 @@ packages:
     resolution: {integrity: sha512-1Y1A//QUXEZK7YKz+rD9WydcE1+EuPr6ZBgKecAB8tmoW6UFv0NREVJe1p+jRxtThkcbbKkfwIbWJe/IeE6m2Q==}
     engines: {node: '>=0.10.0'}
 
-  path-equal@1.2.7:
-    resolution: {integrity: sha512-Lu9jWBbXHI6MQZBrdnEON178/nTGUew6MHGCia5KnQkX/HJ1YpQ0jWlhB4pWIYPdtxH6vlokLwDMUKiAJAFowA==}
+  path-equal@1.2.8:
+    resolution: {integrity: sha512-rCJWMlXlk9lZ2FEllgvh2IgPj/kxMx2sOeqtFNLO8dxEY0I4hBTa+ZW3JAsgeiTe8vL4MifATVDwxF9nGUI7HQ==}
 
   path-is-absolute@1.0.1:
     resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
@@ -1806,13 +1805,13 @@ packages:
   stackback@0.0.2:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
 
-  standard-log-color@13.2.0:
-    resolution: {integrity: sha512-w3MaFAINANx5RAKr+/8OD9hIU3tURmPXeOB7vsHo51nj54gmoDg+WuNj7Fvh8npnZK6LZliufFmTmcqc11mfAQ==}
+  standard-log-color@13.3.1:
+    resolution: {integrity: sha512-CR++e1aHcpuq5bh0jFC2EbwchokUjd3L5EZ+HDl8AwXzOAtn899TkoSdIIR8CgVJX07cBlGOW8xXgZdj3mc9+Q==}
     peerDependencies:
       standard-log: '>=11.0.1'
 
-  standard-log@13.2.0:
-    resolution: {integrity: sha512-WFlhMhuYc7s5U1oh9JTAShgropuXzsZF0N8Wgrynzn7k+n7rFaMlQWRDNBgB2Rn+KQdXyHIQWT85703YY4VA4w==}
+  standard-log@13.3.1:
+    resolution: {integrity: sha512-WcDZypKwq35deXwUV1/ttKodpijdGYSaRVVPHHGNtAIPbvS4rC6xIs1faPtXEUBD33W4RdtJKCZ7/oV1uIrQFw==}
 
   std-env@4.2.0:
     resolution: {integrity: sha512-oCUKSupKTHX53EyjDtuZQ64pjLJ6yYCtpmEw0goYxtjG9KpbRe8KAsl2tBUGU9DyMcJ0RwJ8GqJAFzMXcXW1Rw==}
@@ -1858,6 +1857,9 @@ packages:
 
   tersify@4.0.7:
     resolution: {integrity: sha512-HbSau9xNaHqYRJ/Y6lAddBLNpi5wowJhDGuhfM/6LAmyhsIiNKX3Q50qJwRcKFsV4/BV45XMyTdaHZ5nW6OjRg==}
+
+  tersify@4.0.8:
+    resolution: {integrity: sha512-8SP19qXCXiWztbyJLqmCwstqtZg7F5grbSov3yh8C+fyqHgKyfMaI/c5DCMKIGDkpoKX8cIz9ZqJxN7zZDtQcQ==}
 
   tinybench@2.9.0:
     resolution: {integrity: sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==}
@@ -1925,6 +1927,11 @@ packages:
     peerDependencies:
       typescript: '>= 5.6.0'
 
+  type-plus@8.0.0-beta.12:
+    resolution: {integrity: sha512-isf19V90L8JOn9VBWWwUfH8DU6G3dfPptr3R+JtraYWHqLAsXYI2f9x1HZVTkajrkSffdEbetXUXf7FcIjSIRg==}
+    peerDependencies:
+      typescript: '>= 5.4.0'
+
   typescript@7.0.2:
     resolution: {integrity: sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==}
     engines: {node: '>=16.20.0'}
@@ -1940,8 +1947,8 @@ packages:
   undici-types@8.3.0:
     resolution: {integrity: sha512-j375ScV60dom+YkPFIfTLcOiPxkN/buHz5GobjLhixFuANaNs3C9l4GmrWqejgXWJ7BbJcFYpTEUkS1Ge8bpZQ==}
 
-  unpartial@1.0.7:
-    resolution: {integrity: sha512-DeyxEI3KSlmDihGAk3Js/p/Ca886ymIz39pWH3VVV/LZ36MsRETylFS37fdzWBWDjMlzB63Rdy2KLCdetOMPig==}
+  unpartial@1.0.8:
+    resolution: {integrity: sha512-LDZX3wrdUWQdVKLOgouW+fCqNfietx11UzdipDBRsnx1LWKBkv4FpA9OHVeSNz12STLk6oz07dgENEWnHyAgIg==}
     engines: {node: '>= 20'}
 
   verkit@0.3.2:
@@ -2439,9 +2446,9 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@just-func/types@0.6.0(typescript@7.0.2)':
+  '@just-func/types@0.6.1(typescript@7.0.2)':
     dependencies:
-      type-plus: 8.0.0-beta.10(typescript@7.0.2)
+      type-plus: 8.0.0-beta.12(typescript@7.0.2)
     transitivePeerDependencies:
       - typescript
 
@@ -2468,16 +2475,22 @@ snapshots:
     dependencies:
       quansync: 1.0.0
 
-  '@repobuddy/biome@2.3.1(@biomejs/biome@2.5.11)':
+  '@repobuddy/biome@2.4.0(@biomejs/biome@2.5.11)':
     dependencies:
       '@biomejs/biome': 2.5.11
 
-  '@repobuddy/test@1.0.2': {}
-
-  '@repobuddy/vitest@2.2.0(vitest@4.1.11)':
+  '@repobuddy/test@1.1.0(typescript@7.0.2)':
     dependencies:
-      '@repobuddy/test': 1.0.2
+      assertron: 11.7.0(typescript@7.0.2)
+    transitivePeerDependencies:
+      - typescript
+
+  '@repobuddy/vitest@2.3.0(typescript@7.0.2)(vitest@4.1.11)':
+    dependencies:
+      '@repobuddy/test': 1.1.0(typescript@7.0.2)
       vitest: 4.1.11(@types/node@26.4.1)(@vitest/coverage-v8@4.1.11)(vite@8.2.2(@types/node@26.4.1)(jiti@2.6.1)(yaml@2.9.0))
+    transitivePeerDependencies:
+      - typescript
 
   '@rolldown/binding-android-arm-eabi@1.2.6':
     optional: true
@@ -2845,11 +2858,11 @@ snapshots:
 
   assertion-error@2.0.1: {}
 
-  assertron@11.6.0(typescript@7.0.2):
+  assertron@11.7.0(typescript@7.0.2):
     dependencies:
       is-promise: 4.0.0
-      iso-error: 6.0.5
-      path-equal: 1.2.7
+      iso-error: 7.0.0
+      path-equal: 1.2.8
       satisfier: 5.4.4
       tersify: 4.0.7
       type-plus: 8.0.0-beta.10(typescript@7.0.2)
@@ -3222,8 +3235,6 @@ snapshots:
 
   isexe@4.0.0: {}
 
-  iso-error@6.0.5: {}
-
   iso-error@7.0.0: {}
 
   istanbul-lib-coverage@3.2.2: {}
@@ -3437,7 +3448,7 @@ snapshots:
 
   parse-passwd@1.0.0: {}
 
-  path-equal@1.2.7: {}
+  path-equal@1.2.8: {}
 
   path-is-absolute@1.0.1: {}
 
@@ -3580,19 +3591,20 @@ snapshots:
 
   stackback@0.0.2: {}
 
-  standard-log-color@13.2.0(standard-log@13.2.0(typescript@7.0.2)):
+  standard-log-color@13.3.1(standard-log@13.3.1(typescript@7.0.2)):
     dependencies:
       color-map: 2.2.0
-      standard-log: 13.2.0(typescript@7.0.2)
+      standard-log: 13.3.1(typescript@7.0.2)
       supports-color: 8.1.1
-      unpartial: 1.0.7
+      unpartial: 1.0.8
 
-  standard-log@13.2.0(typescript@7.0.2):
+  standard-log@13.3.1(typescript@7.0.2):
     dependencies:
-      '@just-func/types': 0.6.0(typescript@7.0.2)
-      iso-error: 6.0.5
+      '@just-func/types': 0.6.1(typescript@7.0.2)
+      iso-error: 7.0.0
       ms: 2.1.3
-      type-plus: 8.0.0-beta.10(typescript@7.0.2)
+      type-plus: 8.0.0-beta.12(typescript@7.0.2)
+      unpartial: 1.0.8
     transitivePeerDependencies:
       - typescript
 
@@ -3640,7 +3652,12 @@ snapshots:
   tersify@4.0.7:
     dependencies:
       acorn: 8.18.0
-      unpartial: 1.0.7
+      unpartial: 1.0.8
+
+  tersify@4.0.8:
+    dependencies:
+      acorn: 8.18.0
+      unpartial: 1.0.8
 
   tinybench@2.9.0: {}
 
@@ -3697,7 +3714,13 @@ snapshots:
     dependencies:
       tersify: 4.0.7
       typescript: 7.0.2
-      unpartial: 1.0.7
+      unpartial: 1.0.8
+
+  type-plus@8.0.0-beta.12(typescript@7.0.2):
+    dependencies:
+      tersify: 4.0.7
+      typescript: 7.0.2
+      unpartial: 1.0.8
 
   typescript@7.0.2:
     optionalDependencies:
@@ -3733,7 +3756,7 @@ snapshots:
 
   undici-types@8.3.0: {}
 
-  unpartial@1.0.7: {}
+  unpartial@1.0.8: {}
 
   verkit@0.3.2: {}
 
