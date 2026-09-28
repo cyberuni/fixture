@@ -1,5 +1,12 @@
 # @unional/fixture
 
+## 6.0.2
+
+### Patch Changes
+
+- 5edfa42: Update `type-plus` to `8.0.0-beta.12`, and `standard-log`, `standard-log-color` and `tersify` to their latest versions.
+  `unpartial` now comes from the `unpartial` package, because `type-plus` no longer exports it.
+
 ## 6.0.1
 
 ### Patch Changes
