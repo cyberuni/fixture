@@ -88,7 +88,7 @@
 		"husky": "^9.1.7",
 		"npm-run-all2": "^9.0.0",
 		"path-equal": "^1.2.8",
-		"tsdown": "^0.22.14",
+		"tsdown": "^0.23.0",
 		"turbo": "^2.10.3",
 		"typescript": "^7.0.2",
 		"uncolor": "^0.4.0",
