@@ -91,8 +91,8 @@ importers:
         specifier: ^26.4.0
         version: 26.4.1
       '@types/rimraf':
-        specifier: ^3.0.2
-        version: 3.0.2
+        specifier: ^4.0.0
+        version: 4.0.5
       '@vitest/coverage-v8':
         specifier: ^4.1.11
         version: 4.1.11(vitest@4.1.11)
@@ -705,8 +705,9 @@ packages:
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
 
-  '@types/rimraf@3.0.2':
-    resolution: {integrity: sha512-F3OznnSLAUxFrCEu/L5PY8+ny8DtcFRjx7fZZ9bycvXRi3KPTRS9HOitGZwvPg0juRhXFWIeKX58cnX5YqLohQ==}
+  '@types/rimraf@4.0.5':
+    resolution: {integrity: sha512-DTCZoIQotB2SUJnYgrEx43cQIUYOlNZz0AZPbKU4PSLYTUdML5Gox0++z4F9kQocxStrCmRNhi4x5x/UlwtKUA==}
+    deprecated: This is a stub types definition. rimraf provides its own type definitions, so you do not need this installed.
 
   '@typescript/typescript-aix-ppc64@7.0.2':
     resolution: {integrity: sha512-MTKKkWB7p/0E9xi1d1tHtZ5PiLkGEMIq88pK2CubZjOsLtYTLqhgIgi6zepFa+9GHZ6h05NMCkQxGKiPXMxXtQ==}
@@ -1962,9 +1963,6 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  tersify@4.0.7:
-    resolution: {integrity: sha512-HbSau9xNaHqYRJ/Y6lAddBLNpi5wowJhDGuhfM/6LAmyhsIiNKX3Q50qJwRcKFsV4/BV45XMyTdaHZ5nW6OjRg==}
-
   tersify@4.0.8:
     resolution: {integrity: sha512-8SP19qXCXiWztbyJLqmCwstqtZg7F5grbSov3yh8C+fyqHgKyfMaI/c5DCMKIGDkpoKX8cIz9ZqJxN7zZDtQcQ==}
 
@@ -2751,10 +2749,9 @@ snapshots:
 
   '@types/parse-json@4.0.2': {}
 
-  '@types/rimraf@3.0.2':
+  '@types/rimraf@4.0.5':
     dependencies:
-      '@types/glob': 8.1.0
-      '@types/node': 26.4.1
+      rimraf: 3.0.2
 
   '@typescript/typescript-aix-ppc64@7.0.2':
     optional: true
@@ -3020,7 +3017,7 @@ snapshots:
       iso-error: 7.0.0
       path-equal: 1.2.8
       satisfier: 5.4.4
-      tersify: 4.0.7
+      tersify: 4.0.8
       type-plus: 8.0.0-beta.10(typescript@7.0.2)
     transitivePeerDependencies:
       - typescript
@@ -3744,7 +3741,7 @@ snapshots:
 
   satisfier@5.4.4:
     dependencies:
-      tersify: 4.0.7
+      tersify: 4.0.8
 
   semver-compare@1.0.0: {}
 
@@ -3828,11 +3825,6 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  tersify@4.0.7:
-    dependencies:
-      acorn: 8.18.0
-      unpartial: 1.0.8
-
   tersify@4.0.8:
     dependencies:
       acorn: 8.18.0
@@ -3893,13 +3885,13 @@ snapshots:
 
   type-plus@8.0.0-beta.10(typescript@7.0.2):
     dependencies:
-      tersify: 4.0.7
+      tersify: 4.0.8
       typescript: 7.0.2
       unpartial: 1.0.8
 
   type-plus@8.0.0-beta.12(typescript@7.0.2):
     dependencies:
-      tersify: 4.0.7
+      tersify: 4.0.8
       typescript: 7.0.2
       unpartial: 1.0.8
 
