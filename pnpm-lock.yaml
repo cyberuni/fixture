@@ -82,8 +82,8 @@ importers:
         specifier: ^2.3.0
         version: 2.3.0(typescript@7.0.2)(vitest@4.1.11)
       '@types/glob':
-        specifier: ^8.0.0
-        version: 8.1.0
+        specifier: ^9.0.0
+        version: 9.0.0
       '@types/js-yaml':
         specifier: ^4.0.5
         version: 4.0.9
@@ -687,17 +687,15 @@ packages:
   '@types/estree@1.0.9':
     resolution: {integrity: sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==}
 
-  '@types/glob@8.1.0':
-    resolution: {integrity: sha512-IO+MJPVhoqz+28h1qLAcBEH2+xHMK6MTyHJc7MTnnYb6wsoLR29POVGJ7LycmVXIqyy/4/2ShP5sUwTXuOwb/w==}
+  '@types/glob@9.0.0':
+    resolution: {integrity: sha512-00UxlRaIUvYm4R4W9WYkN8/J+kV8fmOQ7okeH6YFtGWFMt3odD45tpG5yA5wnL7HE6lLgjaTW5n14ju2hl2NNA==}
+    deprecated: This is a stub types definition. glob provides its own type definitions, so you do not need this installed.
 
   '@types/js-yaml@4.0.9':
     resolution: {integrity: sha512-k4MGaQl5TGo/iipqb2UDG2UwjXziSWkh0uysQelTlJpX1qGlpUZYm8PnO4DxG1qBomtJUdYJ6qR6xdIah10JLg==}
 
   '@types/minimatch@3.0.5':
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
-
-  '@types/minimatch@5.1.2':
-    resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
 
   '@types/node@26.4.1':
     resolution: {integrity: sha512-k97ENvZWtvA6yqz5/FS6a7duDgOPEeOQOc2iKS/nY6mX6qJUKtLnWzQS+Xj6tXweyj6ZcTAK2Qecetnvi9nCLA==}
@@ -1962,9 +1960,6 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  tersify@4.0.7:
-    resolution: {integrity: sha512-HbSau9xNaHqYRJ/Y6lAddBLNpi5wowJhDGuhfM/6LAmyhsIiNKX3Q50qJwRcKFsV4/BV45XMyTdaHZ5nW6OjRg==}
-
   tersify@4.0.8:
     resolution: {integrity: sha512-8SP19qXCXiWztbyJLqmCwstqtZg7F5grbSov3yh8C+fyqHgKyfMaI/c5DCMKIGDkpoKX8cIz9ZqJxN7zZDtQcQ==}
 
@@ -2734,16 +2729,13 @@ snapshots:
 
   '@types/estree@1.0.9': {}
 
-  '@types/glob@8.1.0':
+  '@types/glob@9.0.0':
     dependencies:
-      '@types/minimatch': 5.1.2
-      '@types/node': 26.4.1
+      glob: 8.1.0
 
   '@types/js-yaml@4.0.9': {}
 
   '@types/minimatch@3.0.5': {}
-
-  '@types/minimatch@5.1.2': {}
 
   '@types/node@26.4.1':
     dependencies:
@@ -2753,7 +2745,7 @@ snapshots:
 
   '@types/rimraf@3.0.2':
     dependencies:
-      '@types/glob': 8.1.0
+      '@types/glob': 9.0.0
       '@types/node': 26.4.1
 
   '@typescript/typescript-aix-ppc64@7.0.2':
@@ -3020,7 +3012,7 @@ snapshots:
       iso-error: 7.0.0
       path-equal: 1.2.8
       satisfier: 5.4.4
-      tersify: 4.0.7
+      tersify: 4.0.8
       type-plus: 8.0.0-beta.10(typescript@7.0.2)
     transitivePeerDependencies:
       - typescript
@@ -3744,7 +3736,7 @@ snapshots:
 
   satisfier@5.4.4:
     dependencies:
-      tersify: 4.0.7
+      tersify: 4.0.8
 
   semver-compare@1.0.0: {}
 
@@ -3828,11 +3820,6 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  tersify@4.0.7:
-    dependencies:
-      acorn: 8.18.0
-      unpartial: 1.0.8
-
   tersify@4.0.8:
     dependencies:
       acorn: 8.18.0
@@ -3893,13 +3880,13 @@ snapshots:
 
   type-plus@8.0.0-beta.10(typescript@7.0.2):
     dependencies:
-      tersify: 4.0.7
+      tersify: 4.0.8
       typescript: 7.0.2
       unpartial: 1.0.8
 
   type-plus@8.0.0-beta.12(typescript@7.0.2):
     dependencies:
-      tersify: 4.0.7
+      tersify: 4.0.8
       typescript: 7.0.2
       unpartial: 1.0.8
 
