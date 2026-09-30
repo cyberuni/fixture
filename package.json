@@ -94,7 +94,7 @@
 		"uncolor": "^0.4.0",
 		"vitest": "^4.1.11"
 	},
-	"packageManager": "pnpm@11.20.0",
+	"packageManager": "pnpm@11.28.2",
 	"sideEffects": false,
 	"engines": {
 		"node": ">= 20"
