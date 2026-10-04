@@ -81,9 +81,6 @@ importers:
       '@repobuddy/vitest':
         specifier: ^2.3.0
         version: 2.3.0(typescript@7.0.2)(vitest@4.1.11)
-      '@types/glob':
-        specifier: ^8.0.0
-        version: 8.1.0
       '@types/js-yaml':
         specifier: ^4.0.5
         version: 4.0.9

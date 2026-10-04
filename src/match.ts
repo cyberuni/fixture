@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { compare as dirCompare } from 'dir-compare'
-import glob from 'glob'
+import { glob } from 'glob'
 import type { Tersible } from 'tersify'
 import { isSystemError } from 'type-plus'
 import { context } from './context.js'
@@ -107,17 +107,15 @@ function getMissingBaselineMismatch(
 	options: DiffFormatOptions
 ) {
 	if (isFolder(resultPath)) {
-		return new Promise<Tersible[]>((a) => {
-			glob('**', { cwd: resultPath, nodir: true }, (_err, files) => {
-				a(
-					files.map((file) => {
-						const filePath = path.join(resultPath, file)
-						const fileContent = fs.readFileSync(filePath, 'utf-8')
-						return new ExtraResultFile(filePath, fileContent, options)
-					})
-				)
-			})
-		}).then((mismatches) => new Mismatch(mismatches, { ssf: match }))
+		return glob('**', { cwd: resultPath, nodir: true })
+			.then((files) =>
+				files.map((file): Tersible => {
+					const filePath = path.join(resultPath, file)
+					const fileContent = fs.readFileSync(filePath, 'utf-8')
+					return new ExtraResultFile(filePath, fileContent, options)
+				})
+			)
+			.then((mismatches) => new Mismatch(mismatches, { ssf: match }))
 	}
 
 	const fileContent = fs.readFileSync(resultPath, 'utf-8')

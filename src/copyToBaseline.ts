@@ -1,6 +1,6 @@
 import path from 'node:path'
 import { copyFile } from 'cp-file'
-import glob from 'glob'
+import { glob } from 'glob'
 import { ensureFolderExist } from './fsUtils.js'
 
 export interface CopyToBaseline {
@@ -11,11 +11,7 @@ export function createCopyToBaselineFunction(baselineFolder: string, resultFolde
 	return Object.assign(
 		function copyToBaseline(wildcardOrRegExp = '*') {
 			ensureFolderExist(baselineFolder)
-			return new Promise<string[]>((a) => {
-				glob(wildcardOrRegExp, { cwd: resultFolder }, (_err, files) => {
-					a(files)
-				})
-			}).then((files) => {
+			return glob(wildcardOrRegExp, { cwd: resultFolder }).then((files) => {
 				return Promise.all(files.map((f) => copyFile(path.join(resultFolder, f), path.join(baselineFolder, f)))).then(
 					() => {
 						return
