@@ -194,8 +194,8 @@ importers:
         specifier: ^7.0.0
         version: 7.0.0
       js-yaml:
-        specifier: ^4.1.0
-        version: 4.3.2
+        specifier: ^5.0.0
+        version: 5.4.2
       minimatch:
         specifier: ^10.0.0
         version: 10.2.6
@@ -239,9 +239,6 @@ importers:
       '@repobuddy/vitest':
         specifier: ^2.3.0
         version: 2.3.0(typescript@7.0.2)(vitest@5.0.3)
-      '@types/js-yaml':
-        specifier: ^4.0.5
-        version: 4.0.9
       '@types/node':
         specifier: ^26.4.0
         version: 26.4.1
@@ -742,9 +739,6 @@ packages:
 
   '@types/glob@8.1.0':
     resolution: {integrity: sha512-IO+MJPVhoqz+28h1qLAcBEH2+xHMK6MTyHJc7MTnnYb6wsoLR29POVGJ7LycmVXIqyy/4/2ShP5sUwTXuOwb/w==}
-
-  '@types/js-yaml@4.0.9':
-    resolution: {integrity: sha512-k4MGaQl5TGo/iipqb2UDG2UwjXziSWkh0uysQelTlJpX1qGlpUZYm8PnO4DxG1qBomtJUdYJ6qR6xdIah10JLg==}
 
   '@types/minimatch@3.0.5':
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
@@ -1563,6 +1557,10 @@ packages:
 
   js-yaml@4.3.2:
     resolution: {integrity: sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA==}
+    hasBin: true
+
+  js-yaml@5.4.2:
+    resolution: {integrity: sha512-m+aqu+LwO1O6sIopafj8HUVl5aawITwZQe/yHpMCKjaWBaA/d07B/QdMb3529REftiU+RMMHL3Vlsw3hON7vWg==}
     hasBin: true
 
   jsesc@3.1.0:
@@ -2719,8 +2717,6 @@ snapshots:
       '@types/minimatch': 5.1.2
       '@types/node': 26.4.1
 
-  '@types/js-yaml@4.0.9': {}
-
   '@types/minimatch@3.0.5': {}
 
   '@types/minimatch@5.1.2': {}
@@ -3345,6 +3341,10 @@ snapshots:
       esprima: 4.0.1
 
   js-yaml@4.3.2:
+    dependencies:
+      argparse: 2.0.1
+
+  js-yaml@5.4.2:
     dependencies:
       argparse: 2.0.1
 

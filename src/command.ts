@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import { platform } from 'node:os'
 import path from 'node:path'
 import { execa } from 'execa'
-import yaml from 'js-yaml'
+import { load as loadYaml } from 'js-yaml'
 import type { PartialPick } from 'type-plus'
 import { unpartial } from 'unpartial'
 import type { BaselineHandlerContext } from './baseline.js'
@@ -50,7 +50,7 @@ function readCommandInfo({
 		throw new NotCommandCase(caseName, { ssf: execCommand })
 	}
 	const content = fs.readFileSync(fileinfo.filepath, 'utf-8')
-	return unpartial({ command: '', args: [] }, fileinfo.filetype === 'json' ? JSON.parse(content) : yaml.load(content))
+	return unpartial({ command: '', args: [] }, fileinfo.filetype === 'json' ? JSON.parse(content) : loadYaml(content))
 }
 
 // istanbul ignore next
