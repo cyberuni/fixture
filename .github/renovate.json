@@ -34,6 +34,20 @@
 				"@types/rimraf"
 			],
 			"allowedVersions": "<4"
+		},
+		{
+			"description": "chalk v6 requires Node >=22 but this published package supports Node >=20. Lift when the engines floor is raised.",
+			"matchPackageNames": [
+				"chalk"
+			],
+			"allowedVersions": "<6"
+		},
+		{
+			"description": "execa v10 requires Node >=22 but this published package supports Node >=20. Lift when the engines floor is raised.",
+			"matchPackageNames": [
+				"execa"
+			],
+			"allowedVersions": "<10"
 		}
 	]
 }
