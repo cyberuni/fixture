@@ -64,7 +64,7 @@
 		"js-yaml": "^4.1.0",
 		"minimatch": "^10.0.0",
 		"pad-left": "^2.1.0",
-		"rimraf": "^3.0.2",
+		"rimraf": "^6.0.0",
 		"standard-log": "^13.3.1",
 		"standard-log-color": "^13.3.1",
 		"tersify": "^4.0.8",
