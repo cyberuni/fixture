@@ -3,7 +3,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { assertron } from 'assertron'
 import { pathEqual } from 'path-equal'
-import rimraf from 'rimraf'
+import { rimrafSync } from 'rimraf'
 
 import { baseline, Mismatch, MismatchFile } from './index.js'
 
@@ -80,7 +80,7 @@ test('file baseline tests should match file with same caseName if caseName is no
 })
 
 function ensureFolderNotExist(folder: string) {
-	if (fs.existsSync(folder)) rimraf.sync(folder)
+	if (fs.existsSync(folder)) rimrafSync(folder)
 }
 
 function pathsEqual(actuals: string[], expects: string[]) {

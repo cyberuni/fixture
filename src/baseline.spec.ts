@@ -3,7 +3,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { AssertOrder, assertron } from 'assertron'
 import { pathEqual } from 'path-equal'
-import rimraf from 'rimraf'
+import { rimrafSync } from 'rimraf'
 
 import { ensureFolderExist, isFolder } from './fsUtils.js'
 import { baseline, ExtraResultFile, Mismatch, MismatchFile, MissingResultFile } from './index.js'
@@ -323,7 +323,7 @@ test('result folder is empty when handler is invoked (only when the case is fold
 })
 
 function ensureFolderNotExist(folder: string) {
-	if (fs.existsSync(folder)) rimraf.sync(folder)
+	if (fs.existsSync(folder)) rimrafSync(folder)
 }
 
 function pathsEqual(actuals: string[], expects: string[]) {
