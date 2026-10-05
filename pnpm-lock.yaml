@@ -173,8 +173,8 @@ importers:
         specifier: ^5.2.0
         version: 5.6.2
       cp-file:
-        specifier: ^10.0.0
-        version: 10.0.0
+        specifier: ^11.0.0
+        version: 11.0.0
       diff-match-patch:
         specifier: ^1.0.5
         version: 1.0.5
@@ -1244,9 +1244,10 @@ packages:
       typescript:
         optional: true
 
-  cp-file@10.0.0:
-    resolution: {integrity: sha512-vy2Vi1r2epK5WqxOLnskeKeZkdZvTKfFZQCplE3XWsP+SUJyd5XAUFC9lFgTjjXJF2GMne/UML14iEmkAaDfFg==}
+  cp-file@11.0.0:
+    resolution: {integrity: sha512-3FJCALImx3Q9fUaqkDHGgcBlvs43Hz1ZhnxNkAn3gbmnP6Uy1Gn5w8bCSxD3bsHEKwdjoZDdzZq1iPh41mDlyg==}
     engines: {node: '>=14.16'}
+    deprecated: Renamed to copy-file
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -3078,7 +3079,7 @@ snapshots:
     optionalDependencies:
       typescript: 7.0.2
 
-  cp-file@10.0.0:
+  cp-file@11.0.0:
     dependencies:
       graceful-fs: 4.2.11
       nested-error-stacks: 2.1.1
