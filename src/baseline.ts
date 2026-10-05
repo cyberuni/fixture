@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import minimatch from 'minimatch'
+import { minimatch } from 'minimatch'
 import { required } from 'type-plus'
 import { context } from './context.js'
 import { type CopyToBaseline, createCopyToBaselineFunction } from './copyToBaseline.js'
