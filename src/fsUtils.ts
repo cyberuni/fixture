@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import rimraf from 'rimraf'
+import { rimrafSync } from 'rimraf'
 
 export function isHidden(subject: string) {
 	return /(^|\/)\.[^/.]/g.test(subject)
@@ -15,6 +15,6 @@ export function ensureFolderExist(folder: string) {
 }
 
 export function ensureFolderEmpty(folder: string) {
-	rimraf.sync(`${folder}${path.sep}*`)
-	rimraf.sync(`${folder}${path.sep}.*`)
+	rimrafSync(`${folder}${path.sep}*`, { glob: true })
+	rimrafSync(`${folder}${path.sep}.*`, { glob: true })
 }
