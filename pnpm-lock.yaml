@@ -237,8 +237,8 @@ importers:
         specifier: ^2.4.0
         version: 2.4.0(@biomejs/biome@2.5.11)
       '@repobuddy/vitest':
-        specifier: ^2.3.0
-        version: 2.3.0(typescript@7.0.2)(vitest@5.0.3)
+        specifier: ^3.0.0
+        version: 3.0.0(typescript@7.0.2)(vitest@5.0.3)
       '@types/node':
         specifier: ^26.4.0
         version: 26.4.1
@@ -573,14 +573,14 @@ packages:
     peerDependencies:
       '@biomejs/biome': '>= 2'
 
-  '@repobuddy/test@1.1.0':
-    resolution: {integrity: sha512-YW0j5QOxaNA1cSZm8lcKSFNlTey+D3Qpx4N/hb1AsD+lkbXOnhcC+2TrPIP/Om3NmBiNtXKHGg+yPekapEMbLQ==}
+  '@repobuddy/test@1.1.1':
+    resolution: {integrity: sha512-UmnLcSmyk3Y7QsCpFaU6KpdBXmrc7z2WozQTYbIIBAUB/AZcUvzs6KtqgWYm/XFfs/2lJJOg6OdUqaZXTPlk/A==}
 
-  '@repobuddy/vitest@2.3.0':
-    resolution: {integrity: sha512-f9si1f0+OOAbnqRT/Zp9NMJ9DVyF9BZF1IPgq9hgMZ3dgYo+ZlQYtsLSWhyTQNbdTkvm4tzPtLzDQ5wtt0NKWg==}
+  '@repobuddy/vitest@3.0.0':
+    resolution: {integrity: sha512-WgoEqa5pvFOkWK1E8UC4SLzR03KCSqIumTLdtEzHlh/VE3uFccPSCiIUn8Y8BmhcLg6sT1DONF/f4NeA059j+w==}
     peerDependencies:
-      '@vitest/browser-playwright': ^4.0.15
-      vitest: ^4.0.15
+      '@vitest/browser-playwright': ^5.0.0
+      vitest: ^5.0.0
     peerDependenciesMeta:
       '@vitest/browser-playwright':
         optional: true
@@ -2626,15 +2626,15 @@ snapshots:
     dependencies:
       '@biomejs/biome': 2.5.11
 
-  '@repobuddy/test@1.1.0(typescript@7.0.2)':
+  '@repobuddy/test@1.1.1(typescript@7.0.2)':
     dependencies:
       assertron: 11.7.0(typescript@7.0.2)
     transitivePeerDependencies:
       - typescript
 
-  '@repobuddy/vitest@2.3.0(typescript@7.0.2)(vitest@5.0.3)':
+  '@repobuddy/vitest@3.0.0(typescript@7.0.2)(vitest@5.0.3)':
     dependencies:
-      '@repobuddy/test': 1.1.0(typescript@7.0.2)
+      '@repobuddy/test': 1.1.1(typescript@7.0.2)
       vitest: 5.0.3(@types/node@26.4.1)(@vitest/coverage-v8@5.0.3)(vite@8.2.2(@types/node@26.4.1)(jiti@2.6.1)(yaml@2.9.0))
     transitivePeerDependencies:
       - typescript
