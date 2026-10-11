@@ -17,3 +17,5 @@ jobs:
       id-token: write
       contents: write
       pull-requests: write
+      # Approves the Version Packages PR's parked pull_request runs.
+      actions: write
