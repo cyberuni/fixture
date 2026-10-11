@@ -1,5 +1,16 @@
 # @unional/fixture
 
+## 6.0.3
+
+### Patch Changes
+
+- 481c01c: Keep `chalk` on v5 so the declared Node >=20 support holds (v6 requires Node 22).
+- 3f22ff2: Upgrade `glob` to v13 and use its promise API.
+- a4cbb57: Upgrade `js-yaml` to v5.
+- d3655df: Upgrade `minimatch` to v10.
+- a4cbb57: Upgrade `rimraf` to v6.
+- 0f4f683: Update `type-plus` to 8.0.0 and `standard-log`/`standard-log-color` to 13.3.2.
+
 ## 6.0.2
 
 ### Patch Changes
