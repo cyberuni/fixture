@@ -215,8 +215,8 @@ importers:
         specifier: ^4.0.8
         version: 4.0.8
       type-plus:
-        specifier: 8.0.0
-        version: 8.0.0(typescript@7.0.2)
+        specifier: 8.0.1
+        version: 8.0.1(typescript@7.0.2)
       unpartial:
         specifier: ^1.0.8
         version: 1.0.8
@@ -2061,8 +2061,8 @@ packages:
     resolution: {integrity: sha512-AswgMPnpOoaVZHrrSBejETzEbuIA69OVGwfkHwfrY0A23VjWXBANzgq9+OymWOHAIArB7D1+1z498WY8fGg1Jw==}
     hasBin: true
 
-  type-plus@8.0.0:
-    resolution: {integrity: sha512-wYKemYpT2XPgZyqZUvo6pT0ZiwWHcLJMyR68ZjY4IB96ozUpxrb6M7pj9xYzNcBHWG4r17WqXnkGRQZrHAWs7A==}
+  type-plus@8.0.1:
+    resolution: {integrity: sha512-x1OtyTGuqmmnNu5+iL93KVsHLl6PMeRWUDN8yz+X4f86TuEcXSzX7EAdBK+3CFSp2jyVnQuzvof1Z/3Noc3Dig==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       typescript: '>= 5.4.0'
@@ -2962,7 +2962,7 @@ snapshots:
       path-equal: 1.2.8
       satisfier: 5.4.6
       tersify: 4.0.8
-      type-plus: 8.0.0(typescript@7.0.2)
+      type-plus: 8.0.1(typescript@7.0.2)
     transitivePeerDependencies:
       - typescript
 
@@ -3780,7 +3780,7 @@ snapshots:
       '@turbo/windows-64': 2.10.12
       '@turbo/windows-arm64': 2.10.12
 
-  type-plus@8.0.0(typescript@7.0.2):
+  type-plus@8.0.1(typescript@7.0.2):
     dependencies:
       unpartial: 1.0.8
     optionalDependencies:
