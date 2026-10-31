@@ -27,7 +27,8 @@
 	"files": [
 		"esm",
 		"src",
-		"!src/**/*.spec.ts"
+		"!src/**/*.spec.ts",
+		"CHANGELOG.md"
 	],
 	"scripts": {
 		"build": "tsdown",
