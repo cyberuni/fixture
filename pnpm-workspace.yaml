@@ -53,3 +53,5 @@ minimumReleaseAgeExclude:
   - '@unional/*'
   # Renovate security update: glob@14.0.2
   - glob@14.0.2
+  # Renovate security update: minimatch@11.0.1
+  - minimatch@11.0.1
