@@ -197,8 +197,8 @@ importers:
         specifier: ^5.0.0
         version: 5.4.2
       minimatch:
-        specifier: ^10.0.0
-        version: 10.2.6
+        specifier: ^11.0.0
+        version: 11.0.4
       pad-left:
         specifier: ^2.1.0
         version: 2.1.0
