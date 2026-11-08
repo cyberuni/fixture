@@ -92,7 +92,7 @@
 		"uncolor": "^0.4.0",
 		"vitest": "^5.0.0"
 	},
-	"packageManager": "pnpm@12.17.0",
+	"packageManager": "pnpm@12.18.0",
 	"sideEffects": false,
 	"engines": {
 		"node": ">= 20"
