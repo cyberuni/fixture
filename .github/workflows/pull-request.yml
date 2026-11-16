@@ -6,13 +6,13 @@ on:
 
 jobs:
   code:
-    uses: cyberuni/.github/.github/workflows/pnpm-verify.yml@main
+    uses: repobuddy/.github/.github/workflows/pnpm-verify.yml@v2
     with:
       os: '["ubuntu-latest"]'
       skip-playwright: true
 
   publish-gate:
     if: startsWith(github.head_ref, 'changeset-release/')
-    uses: cyberuni/.github/.github/workflows/pnpm-publish-gate.yml@main
+    uses: repobuddy/.github/.github/workflows/pnpm-publish-gate.yml@v2
     permissions:
       contents: read
