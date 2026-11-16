@@ -15,13 +15,6 @@
 			"automerge": true
 		},
 		{
-			"description": "@types/node tracks the supported Node range, so bumps are a deliberate call.",
-			"matchPackageNames": [
-				"@types/node"
-			],
-			"automerge": false
-		},
-		{
 			"description": "@types/glob >=9 and @types/rimraf >=4 are deprecated stubs; glob/rimraf ship their own types. Lift when glob/rimraf themselves are upgraded.",
 			"matchPackageNames": [
 				"@types/glob"
